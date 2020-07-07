@@ -28,6 +28,13 @@ function HomePage() {
         }
     }
 
+    const deleteFormItem = (key) => {
+        const filteredItems = formItems.filter(items => items.key!== key);
+        setFormItems([
+            ...filteredItems
+        ])
+    }
+
     return (
         <div className="homepage">
             <header>
@@ -40,7 +47,7 @@ function HomePage() {
                     />
                     <button type="Submit"> Add </button>
                 </form>
-                <ListItems items = {formItems}/>
+                <ListItems items = {formItems} deleteItem = {deleteFormItem}/>
             </header>
         </div>
     )
