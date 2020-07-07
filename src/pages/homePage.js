@@ -35,6 +35,16 @@ function HomePage() {
         ])
     }
 
+    const editFormItem = (text, key) => {
+        const items = formItems.map(item => {
+            if(item.key === key){
+                item.text = text;
+            }
+            return item
+        })
+        setFormItems(items)
+    }
+
     return (
         <div className="homepage">
             <header>
@@ -47,7 +57,7 @@ function HomePage() {
                     />
                     <button type="Submit"> Add </button>
                 </form>
-                <ListItems items = {formItems} deleteItem = {deleteFormItem}/>
+                <ListItems items = {formItems} deleteItem = {deleteFormItem} editItem = {editFormItem}/>
             </header>
         </div>
     )
