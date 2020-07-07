@@ -46,10 +46,15 @@ body {
   border-radius: 5px;
 }
 
-.list p {
+.list .item {
   padding: 10px;
+  position: relative;
 }
 
 .list .fa {
-  color: black;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 5px;
 }
